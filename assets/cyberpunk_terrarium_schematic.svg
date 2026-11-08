@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1220 1170" width="1220" height="1170" font-family="Arial, Helvetica, sans-serif">
+  <rect width="1220" height="1170" fill="#ffffff"/>
+  <text x="610" y="48" text-anchor="middle" font-size="28" font-weight="bold" fill="#222">Cyberpunk Terrarium Schematic</text>
+
+  <g transform="translate(0,50)" stroke-linecap="round" stroke-linejoin="round">
+    <!-- MCU -->
+    <rect x="40" y="68" width="220" height="980" rx="14" fill="#f3f3f3" stroke="#222" stroke-width="3"/>
+    <g font-size="15" fill="#444" text-anchor="end">
+      <text x="249" y="114">3V3</text>
+      <text x="249" y="142">GND</text>
+      <text x="249" y="169">GPIO8 (SDA)</text>
+      <text x="249" y="196">GPIO9 (SCL)</text>
+      <text x="249" y="456">5V</text>
+      <text x="249" y="729">GPIO0</text>
+      <text x="249" y="880">GPIO21</text>
+      <text x="249" y="948">GPIO20</text>
+      <text x="249" y="1015">GND</text>
+    </g>
+    <g font-size="20" font-weight="bold" fill="#222" text-anchor="middle">
+      <text x="150" y="519">ESP32-C3</text>
+      <text x="150" y="544">Super Mini</text>
+    </g>
+
+    <!-- I2C / power buses -->
+    <g stroke-width="3" fill="none">
+      <path d="M260 109H916M642 109V260M916 109V260" stroke="#b83a2e"/>
+      <path d="M260 137H957M684 137V260M957 137V260" stroke="#222"/>
+      <path d="M260 164H998M725 164V260M998 164V260" stroke="#1f77b4"/>
+      <path d="M260 191H1039M766 191V260M1039 191V260" stroke="#2ca02c"/>
+    </g>
+    <g>
+      <circle cx="642" cy="109" r="4.5" fill="#b83a2e"/><circle cx="916" cy="109" r="4.5" fill="#b83a2e"/>
+      <circle cx="684" cy="137" r="4.5" fill="#222"/><circle cx="957" cy="137" r="4.5" fill="#222"/>
+      <circle cx="725" cy="164" r="4.5" fill="#1f77b4"/><circle cx="998" cy="164" r="4.5" fill="#1f77b4"/>
+      <circle cx="766" cy="191" r="4.5" fill="#2ca02c"/><circle cx="1039" cy="191" r="4.5" fill="#2ca02c"/>
+    </g>
+
+    <!-- Sensor boxes (labels aligned) -->
+    <g fill="#fff" stroke="#222" stroke-width="3">
+      <rect x="615" y="260" width="192" height="85" rx="8"/>
+      <rect x="889" y="260" width="192" height="85" rx="8"/>
+    </g>
+    <g font-size="13" fill="#444" text-anchor="middle">
+      <text x="642" y="285">VCC</text><text x="684" y="285">GND</text><text x="725" y="285">SDA</text><text x="766" y="285">SCL</text>
+      <text x="916" y="285">VCC</text><text x="957" y="285">GND</text><text x="998" y="285">SDA</text><text x="1039" y="285">SCL</text>
+    </g>
+    <g font-size="16" font-weight="bold" fill="#222" text-anchor="middle">
+      <text x="711" y="328">OLED 0.91"</text>
+      <text x="985" y="328">GXHT30</text>
+    </g>
+
+    <!-- 5V rail -->
+    <path d="M260 451H848" stroke="#e8890c" stroke-width="3" fill="none"/>
+
+    <!-- LED branches: x, fill, resistor label, led label -->
+    <g stroke="#222" stroke-width="2.5" fill="none">
+      <!-- white 1 -->
+      <path d="M369 451V485M369 520V537M369 558V615" stroke="#222"/>
+      <rect x="360" y="485" width="18" height="35" fill="#fff"/>
+      <path d="M359 537H379L369 558Z M359 558H379" fill="#fff"/>
+      <!-- white 2 -->
+      <path d="M451 451V485M451 520V537M451 558V615"/>
+      <rect x="442" y="485" width="18" height="35" fill="#fff"/>
+      <path d="M441 537H461L451 558Z M441 558H461" fill="#fff"/>
+      <!-- white 3 -->
+      <path d="M533 451V485M533 520V537M533 558V615"/>
+      <rect x="524" y="485" width="18" height="35" fill="#fff"/>
+      <path d="M523 537H543L533 558Z M523 558H543" fill="#fff"/>
+      <!-- blue 1 -->
+      <path d="M766 451V485M766 520V537M766 558V615"/>
+      <rect x="757" y="485" width="18" height="35" fill="#fff"/>
+      <path d="M756 537H776L766 558Z" fill="#29b6f6"/><path d="M756 558H776"/>
+      <!-- blue 2 -->
+      <path d="M848 451V485M848 520V537M848 558V615"/>
+      <rect x="839" y="485" width="18" height="35" fill="#fff"/>
+      <path d="M838 537H858L848 558Z" fill="#29b6f6"/><path d="M838 558H858"/>
+      <!-- collector buses -->
+      <path d="M369 615H650V688M451 615V615M533 615V615"/>
+      <path d="M766 615H950V688M848 615V615"/>
+    </g>
+    <g fill="#e8890c">
+      <circle cx="369" cy="451" r="4.5"/><circle cx="451" cy="451" r="4.5"/><circle cx="533" cy="451" r="4.5"/>
+      <circle cx="766" cy="451" r="4.5"/><circle cx="848" cy="451" r="4.5"/>
+    </g>
+    <g fill="#222">
+      <circle cx="369" cy="615" r="4.5"/><circle cx="451" cy="615" r="4.5"/><circle cx="533" cy="615" r="4.5"/>
+      <circle cx="766" cy="615" r="4.5"/><circle cx="848" cy="615" r="4.5"/>
+    </g>
+
+    <!-- LED labels -->
+    <g font-size="13" fill="#444">
+      <text x="385" y="507">100 Ω</text><text x="467" y="507">100 Ω</text><text x="549" y="507">100 Ω</text>
+      <text x="782" y="507">220 Ω</text><text x="864" y="507">220 Ω</text>
+    </g>
+    <g font-size="12" fill="#777">
+      <text x="385" y="552">white</text><text x="467" y="552">white</text><text x="549" y="552">white</text>
+      <text x="782" y="552">blue</text><text x="864" y="552">blue</text>
+    </g>
+
+    <!-- Transistor 1 -->
+    <g stroke="#222" stroke-width="2.5" fill="none">
+      <path d="M260 724H417M452 724H615"/>
+      <rect x="417" y="715" width="35" height="18" fill="#fff"/>
+      <path d="M615 703V747"/>
+      <path d="M615 714L650 688M615 737L650 760V805"/>
+      <path d="M638 805H662M643 812H657M647 818H653"/>
+    </g>
+    <path d="M650 760L630 747L641 741Z" fill="#222" stroke="#222" stroke-width="1" transform="translate(4,6) scale(0.9) translate(-60,-69)" opacity="0"/>
+    <polygon points="650,760 636,756 643,745" fill="#222"/>
+    <g font-size="13" fill="#444">
+      <text x="434" y="708" text-anchor="middle">1 kΩ</text>
+      <text x="668" y="738">NPN</text>
+    </g>
+
+    <!-- Transistor 2 -->
+    <g stroke="#222" stroke-width="2.5" fill="none">
+      <path d="M260 875H739V724H760M795 724H915"/>
+      <rect x="760" y="715" width="35" height="18" fill="#fff"/>
+      <path d="M915 703V747"/>
+      <path d="M915 714L950 688M915 737L950 760V805"/>
+      <path d="M938 805H962M943 812H957M947 818H953"/>
+    </g>
+    <polygon points="950,760 936,756 943,745" fill="#222"/>
+    <g font-size="13" fill="#444">
+      <text x="777" y="708" text-anchor="middle">1 kΩ</text>
+      <text x="968" y="738">NPN</text>
+    </g>
+    <path d="M260 875H739V724" stroke="#8e44ad" stroke-width="3" fill="none"/>
+    <path d="M260 724H417M452 724H615" stroke="#8e44ad" stroke-width="3" fill="none"/>
+    <path d="M739 724H760M795 724H915" stroke="#8e44ad" stroke-width="3" fill="none"/>
+
+    <!-- Red LED on GPIO20 -->
+    <path d="M260 943H363M398 943H461" stroke="#8e44ad" stroke-width="3" fill="none"/>
+    <rect x="363" y="935" width="35" height="16" fill="#fff" stroke="#222" stroke-width="2.5"/>
+    <path d="M461 933V953L481 943Z" fill="#e53935" stroke="#222" stroke-width="2.5"/>
+    <path d="M481 933V953M481 943H547V970" stroke="#222" stroke-width="2.5" fill="none"/>
+    <path d="M535 970H559M540 977H554M544 983H550" stroke="#222" stroke-width="2.5" fill="none"/>
+
+    <!-- ESP32 GND pin -->
+    <path d="M260 1010H400V1028" stroke="#222" stroke-width="3" fill="none"/>
+    <path d="M388 1028H412M393 1035H407M397 1041H403" stroke="#222" stroke-width="2.5" fill="none"/>
+    <g font-size="13" fill="#444">
+      <text x="380" y="925" text-anchor="middle">100 Ω</text>
+      <text x="471" y="925" text-anchor="middle" fill="#777" font-size="12">red</text>
+    </g>
+  </g>
+</svg>
